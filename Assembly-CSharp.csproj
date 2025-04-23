@@ -58,6 +58,26 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Domain\Core\Aggregates\AggregateRoot.cs" />
+     <Compile Include="Assets\Domain\Core\Entities\Base\Entity.cs" />
+     <Compile Include="Assets\Domain\Core\Services\EventBus.cs" />
+     <Compile Include="Assets\Domain\Core\ValueObjects\Cost.cs" />
+     <Compile Include="Assets\Domain\Core\ValueObjects\Damage.cs" />
+     <Compile Include="Assets\Domain\Core\ValueObjects\Health.cs" />
+     <Compile Include="Assets\Domain\Core\ValueObjects\Position.cs" />
+     <Compile Include="Assets\Domain\Core\ValueObjects\Range.cs" />
+     <Compile Include="Assets\Domain\Core\ValueObjects\ValueObject.cs" />
+     <Compile Include="Assets\Domain\Enemy\Entities\EnemyEntity.cs" />
+     <Compile Include="Assets\Domain\Enemy\Entities\EnemyType.cs" />
+     <Compile Include="Assets\Domain\Enemy\Services\EnemyService.cs" />
+     <Compile Include="Assets\Domain\Enemy\ValueObjects\EnemyStats.cs" />
+     <Compile Include="Assets\Domain\Tower\Entities\TowerEntity.cs" />
+     <Compile Include="Assets\Domain\Tower\Entities\TowerType.cs" />
+     <Compile Include="Assets\Domain\Tower\Services\TowerService.cs" />
+     <Compile Include="Assets\Domain\Tower\ValueObjects\TowerStats.cs" />
+     <Compile Include="Assets\Domain\Wave\Entities\WaveEntity.cs" />
+     <Compile Include="Assets\Domain\Wave\Services\WaveService.cs" />
+     <Compile Include="Assets\Domain\Wave\ValueObjects\WaveConfig.cs" />
      <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
      <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
      <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />
