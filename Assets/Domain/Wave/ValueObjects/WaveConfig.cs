@@ -10,18 +10,12 @@ namespace TowerDefense.Domain.Wave.ValueObjects
         public int TotalEnemyCount { get; }
         public Dictionary<EnemyType, int> EnemyDistribution { get; }
 
-        public WaveConfig(int waveNumber, float spawnInterval, Dictionary<EnemyType, int> enemyDistribution)
+        public WaveConfig(int waveNumber, float spawnInterval, int totalEnemyCount, Dictionary<EnemyType, int> enemyDistribution)
         {
             WaveNumber = waveNumber;
             SpawnInterval = spawnInterval;
+            TotalEnemyCount = totalEnemyCount;
             EnemyDistribution = new Dictionary<EnemyType, int>(enemyDistribution);
-            
-            // Calculate total enemy count from distribution
-            TotalEnemyCount = 0;
-            foreach (var count in enemyDistribution.Values)
-            {
-                TotalEnemyCount += count;
-            }
         }
     }
 } 

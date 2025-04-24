@@ -1,6 +1,9 @@
 using System;
 using System.Collections.Generic;
+using TowerDefense.Domain.Core.ValueObjects;
 using TowerDefense.Domain.Enemy.Entities;
+using TowerDefense.Domain.Enemy.Services;
+using TowerDefense.Domain.Enemy.ValueObjects;
 using TowerDefense.Domain.Wave.Entities;
 using TowerDefense.Domain.Wave.ValueObjects;
 
@@ -8,38 +11,41 @@ namespace TowerDefense.Domain.Wave.Services
 {
     public class WaveService
     {
-        private const float BASE_SPAWN_INTERVAL = 1.0f;
-        private const int BASE_ENEMY_COUNT = 10;
+        private const float BaseSpawnInterval = 1.0f;
+        private const int BaseEnemyCount = 10;
+        private readonly IEnemyService _enemyService;
+
+        public WaveService(IEnemyService enemyService)
+        {
+            _enemyService = enemyService ?? throw new ArgumentNullException(nameof(enemyService));
+        }
 
         public WaveConfig GenerateWaveConfig(int waveNumber)
         {
             var spawnInterval = CalculateSpawnInterval(waveNumber);
             var enemyDistribution = GenerateEnemyDistribution(waveNumber);
+            var totalEnemyCount = CalculateEnemyCount(waveNumber);
 
-            return new WaveConfig(waveNumber, spawnInterval, enemyDistribution);
+            return new WaveConfig(waveNumber, spawnInterval, totalEnemyCount, enemyDistribution);
         }
 
         private float CalculateSpawnInterval(int waveNumber)
         {
-            // Spawn interval decreases as wave number increases
-            return Math.Max(0.2f, BASE_SPAWN_INTERVAL - (waveNumber - 1) * 0.1f);
+            return Math.Max(0.2f, BaseSpawnInterval - (waveNumber - 1) * 0.1f);
         }
 
         private int CalculateEnemyCount(int waveNumber)
         {
-            // Enemy count increases as wave number increases
-            return BASE_ENEMY_COUNT + (waveNumber - 1) * 2;
+            return BaseEnemyCount + (waveNumber - 1) * 2;
         }
 
         private Dictionary<EnemyType, int> GenerateEnemyDistribution(int waveNumber)
         {
             var distribution = new Dictionary<EnemyType, int>();
             var totalEnemies = CalculateEnemyCount(waveNumber);
-
-            // Basic enemies are always present
+            
             distribution[EnemyType.Basic] = (int)(totalEnemies * 0.4f);
-
-            // Add other enemy types based on wave number
+            
             if (waveNumber >= 2)
             {
                 distribution[EnemyType.Fast] = (int)(totalEnemies * 0.2f);
@@ -54,14 +60,12 @@ namespace TowerDefense.Domain.Wave.Services
             {
                 distribution[EnemyType.Flying] = (int)(totalEnemies * 0.1f);
             }
-
-            // Boss waves every 5 waves
+            
             if (waveNumber % 5 == 0)
             {
                 distribution[EnemyType.Boss] = 1;
             }
-
-            // Adjust counts to match total
+            
             var currentTotal = 0;
             foreach (var count in distribution.Values)
             {
@@ -80,6 +84,23 @@ namespace TowerDefense.Domain.Wave.Services
         {
             var config = GenerateWaveConfig(waveNumber);
             return new WaveEntity(config);
+        }
+        
+        public EnemyEntity SpawnEnemyForWave(WaveEntity wave, Position startPosition)
+        {
+            if (wave == null)
+                throw new ArgumentNullException(nameof(wave));
+                
+            if (!wave.CanSpawnEnemy())
+                return null;
+                
+            var enemyType = wave.GetNextEnemyType();
+            var enemy = _enemyService.SpawnEnemy(enemyType, startPosition);
+            
+            // 将敌人添加到波次中
+            wave.SpawnEnemy(enemyType, startPosition);
+            
+            return enemy;
         }
     }
 } 

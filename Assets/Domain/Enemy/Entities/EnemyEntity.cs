@@ -12,7 +12,27 @@ namespace TowerDefense.Domain.Enemy.Entities
         public Position Position { get; private set; }
         public EnemyStats Stats { get; private set; }
         public float DistanceTraveled { get; private set; }
-        public bool IsDead { get; private set; }
+        
+        private EnemyState _currentState;
+        public EnemyStateType CurrentStateType
+        {
+            get
+            {
+                switch (_currentState.GetType().Name)
+                {
+                    case nameof(MovingState):
+                        return EnemyStateType.Moving;
+                    case nameof(DamagedState):
+                        return EnemyStateType.Damaged;
+                    case nameof(DeadState):
+                        return EnemyStateType.Dead;
+                    default:
+                        throw new InvalidOperationException("Unknown state type");
+                }
+            }
+        }
+
+        public bool IsDead => CurrentStateType == EnemyStateType.Dead;
 
         public EnemyEntity(EnemyType type, Position position, EnemyStats stats)
         {
@@ -20,14 +40,21 @@ namespace TowerDefense.Domain.Enemy.Entities
             Position = position;
             Stats = stats;
             DistanceTraveled = 0f;
-            IsDead = false;
+            
+            // 初始化状态
+            ChangeState(new MovingState(this));
         }
 
         public void Move(Position newPosition, float distance)
         {
+            if (IsDead)
+                return;
+
             Position = newPosition;
             DistanceTraveled += distance;
             EventBus.instance.AddDomainEvent(new EnemyMovedEvent(Id, Position, DistanceTraveled));
+            
+            _currentState.Update();
         }
 
         public void TakeDamage(float damage)
@@ -40,14 +67,30 @@ namespace TowerDefense.Domain.Enemy.Entities
 
             if (Stats.Health.IsDead)
             {
-                IsDead = true;
+                ChangeState(new DeadState(this));
                 EventBus.instance.AddDomainEvent(new EnemyDiedEvent(Id, Stats.Reward));
+            }
+            else
+            {
+                ChangeState(new DamagedState(this));
             }
         }
 
         public bool HasReachedEnd(float pathLength)
         {
             return DistanceTraveled >= pathLength;
+        }
+
+        private void ChangeState(EnemyState newState)
+        {
+            _currentState?.Exit();
+            _currentState = newState;
+            _currentState.Enter();
+        }
+
+        public void Update()
+        {
+            _currentState?.Update();
         }
     }
     

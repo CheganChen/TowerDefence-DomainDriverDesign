@@ -9,6 +9,13 @@ namespace TowerDefense.Domain.Core.ValueObjects
         public float Y { get; }
         public float Z { get; }
 
+        public Position(float x, float z)
+        {
+            X = x;
+            Y = 0;
+            Z = z;
+        }
+        
         public Position(float x, float y, float z)
         {
             X = x;
