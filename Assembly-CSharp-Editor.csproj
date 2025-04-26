@@ -12,7 +12,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{5b91857b-206c-ab57-3e2c-b64ed3b37964}</ProjectGuid>
+    <ProjectGuid>{4fcf9a12-7bac-40df-8c7f-c96053960622}</ProjectGuid>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -30,7 +30,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169,0649</NoWarn>
-    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
     <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup>
@@ -84,9 +84,9 @@
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\PostProcessing\Editor\Monitors\VectorscopeMonitor.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\PostProcessing\Editor\PostProcessingFactory.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\PostProcessing\Editor\PostProcessingMonitor.cs" />
-    <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\TowerDefense\Level\Editor\WaveEditor.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\PostProcessing\Editor\Utils\ReflectionUtils.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\PostProcessing\Editor\PropertyDrawers\TrackballGroupDrawer.cs" />
+    <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\TowerDefense\Level\Editor\WaveEditor.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\TowerDefense\MeshCreator\Editor\AreaMeshCreatorEditor.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Tuanjie\Hub\Editor\2022.3.55t1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
@@ -374,19 +374,22 @@
       <HintPath>C:\Program Files\Tuanjie\Hub\Editor\2022.3.55t1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="unityplastic">
-      <HintPath>D:\Unity_Project\TowerDefense_DomainDriverDesign\Library\PackageCache\com.unity.collab-proxy@2.5.1\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
+      <HintPath>D:\Unity_Project\TowerDefence-DomainDriverDesign\Library\PackageCache\com.unity.collab-proxy@2.5.1\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Plastic.Antlr3.Runtime">
-      <HintPath>D:\Unity_Project\TowerDefense_DomainDriverDesign\Library\PackageCache\com.unity.collab-proxy@2.5.1\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+      <HintPath>D:\Unity_Project\TowerDefence-DomainDriverDesign\Library\PackageCache\com.unity.collab-proxy@2.5.1\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Plastic.Newtonsoft.Json">
-      <HintPath>D:\Unity_Project\TowerDefense_DomainDriverDesign\Library\PackageCache\com.unity.collab-proxy@2.5.1\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
+      <HintPath>D:\Unity_Project\TowerDefence-DomainDriverDesign\Library\PackageCache\com.unity.collab-proxy@2.5.1\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="log4netPlastic">
-      <HintPath>D:\Unity_Project\TowerDefense_DomainDriverDesign\Library\PackageCache\com.unity.collab-proxy@2.5.1\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
+      <HintPath>D:\Unity_Project\TowerDefence-DomainDriverDesign\Library\PackageCache\com.unity.collab-proxy@2.5.1\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>D:\Unity_Project\TowerDefence-DomainDriverDesign\Assets\UnityGameFramework\Libraries\ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
-      <HintPath>D:\Unity_Project\TowerDefense_DomainDriverDesign\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
+      <HintPath>D:\Unity_Project\TowerDefence-DomainDriverDesign\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:\Program Files\Tuanjie\Hub\Editor\2022.3.55t1\Editor\Data\TuanjieReferenceAssemblies\tuanjie-4.8-api\mscorlib.dll</HintPath>
@@ -764,58 +767,70 @@
       <HintPath>C:\Program Files\Tuanjie\Hub\Editor\2022.3.55t1\Editor\Data\TuanjieReferenceAssemblies\tuanjie-4.8-api\Facades\System.Xml.XPath.XDocument.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TestRunner">
-      <HintPath>D:\Unity_Project\TowerDefense_DomainDriverDesign\Library\ScriptAssemblies\UnityEngine.TestRunner.dll</HintPath>
+      <HintPath>D:\Unity_Project\TowerDefence-DomainDriverDesign\Library\ScriptAssemblies\UnityEngine.TestRunner.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.TestRunner">
-      <HintPath>D:\Unity_Project\TowerDefense_DomainDriverDesign\Library\ScriptAssemblies\UnityEditor.TestRunner.dll</HintPath>
+      <HintPath>D:\Unity_Project\TowerDefence-DomainDriverDesign\Library\ScriptAssemblies\UnityEditor.TestRunner.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>D:\Unity_Project\TowerDefense_DomainDriverDesign\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
+      <HintPath>D:\Unity_Project\TowerDefence-DomainDriverDesign\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.AI.Navigation">
-      <HintPath>D:\Unity_Project\TowerDefense_DomainDriverDesign\Library\ScriptAssemblies\Unity.AI.Navigation.dll</HintPath>
+      <HintPath>D:\Unity_Project\TowerDefence-DomainDriverDesign\Library\ScriptAssemblies\Unity.AI.Navigation.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PlasticSCM.Editor">
-      <HintPath>D:\Unity_Project\TowerDefense_DomainDriverDesign\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
+      <HintPath>D:\Unity_Project\TowerDefence-DomainDriverDesign\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.AI.Navigation.Updater">
-      <HintPath>D:\Unity_Project\TowerDefense_DomainDriverDesign\Library\ScriptAssemblies\Unity.AI.Navigation.Updater.dll</HintPath>
+      <HintPath>D:\Unity_Project\TowerDefence-DomainDriverDesign\Library\ScriptAssemblies\Unity.AI.Navigation.Updater.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>D:\Unity_Project\TowerDefense_DomainDriverDesign\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>D:\Unity_Project\TowerDefence-DomainDriverDesign\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualStudio.Editor">
-      <HintPath>D:\Unity_Project\TowerDefense_DomainDriverDesign\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
+      <HintPath>D:\Unity_Project\TowerDefence-DomainDriverDesign\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:\Unity_Project\TowerDefense_DomainDriverDesign\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.UI">
-      <HintPath>D:\Unity_Project\TowerDefense_DomainDriverDesign\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+      <HintPath>D:\Unity_Project\TowerDefence-DomainDriverDesign\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:\Unity_Project\TowerDefense_DomainDriverDesign\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>D:\Unity_Project\TowerDefence-DomainDriverDesign\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>D:\Unity_Project\TowerDefense_DomainDriverDesign\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>D:\Unity_Project\TowerDefence-DomainDriverDesign\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.AI.Navigation.Editor">
-      <HintPath>D:\Unity_Project\TowerDefense_DomainDriverDesign\Library\ScriptAssemblies\Unity.AI.Navigation.Editor.dll</HintPath>
+      <HintPath>D:\Unity_Project\TowerDefence-DomainDriverDesign\Library\ScriptAssemblies\Unity.AI.Navigation.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>D:\Unity_Project\TowerDefense_DomainDriverDesign\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+      <HintPath>D:\Unity_Project\TowerDefence-DomainDriverDesign\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.AI.Navigation.Editor.ConversionSystem">
-      <HintPath>D:\Unity_Project\TowerDefense_DomainDriverDesign\Library\ScriptAssemblies\Unity.AI.Navigation.Editor.ConversionSystem.dll</HintPath>
+      <HintPath>D:\Unity_Project\TowerDefence-DomainDriverDesign\Library\ScriptAssemblies\Unity.AI.Navigation.Editor.ConversionSystem.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>D:\Unity_Project\TowerDefense_DomainDriverDesign\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>D:\Unity_Project\TowerDefence-DomainDriverDesign\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>D:\Unity_Project\TowerDefence-DomainDriverDesign\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{a8a8e5fa-da13-b3cd-836d-a26fe4db7dda}</Project>
+      <Project>{ebef2fc4-7890-a090-7629-98fecfa1a99e}</Project>
       <Name>Assembly-CSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityGameFramework.Runtime.csproj">
+      <Project>{938db9ea-fccc-37a0-5a11-1089bdc231d4}</Project>
+      <Name>UnityGameFramework.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="GameFramework.csproj">
+      <Project>{eb19356f-0d20-eb84-c0c5-02c413a476c0}</Project>
+      <Name>GameFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityGameFramework.Editor.csproj">
+      <Project>{e67e4860-23f7-dc66-c38b-6a8c61d4cf23}</Project>
+      <Name>UnityGameFramework.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

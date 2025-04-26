@@ -12,7 +12,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{a8a8e5fa-da13-b3cd-836d-a26fe4db7dda}</ProjectGuid>
+    <ProjectGuid>{ebef2fc4-7890-a090-7629-98fecfa1a99e}</ProjectGuid>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -30,7 +30,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169,0649</NoWarn>
-    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
     <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup>
@@ -46,8 +46,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\TowerDefense\Level\Wave.cs" />
-    <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\TowerDefense\UI\HUD\GameUI.cs" />
     <Compile Include="Assets\Domain\Core\Entities\Base\AggregateRoot.cs" />
+    <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\TowerDefense\UI\HUD\GameUI.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\PostProcessing\Runtime\PostProcessingBehaviour.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\Core\Utilities\HexPoint.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\TowerDefense\Economy\CurrencyChangeInfo.cs" />
@@ -77,8 +77,8 @@
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\Core\Utilities\VectorHelper.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\TowerDefense\Towers\Projectiles\HitscanAttack.cs" />
     <Compile Include="Assets\Domain\Enemy\Entities\EnemyType.cs" />
-    <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\TowerDefense\Level\LevelState.cs" />
     <Compile Include="Assets\Domain\Wave\Entities\WaveEntity.cs" />
+    <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\TowerDefense\Level\LevelState.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\TowerDefense\Towers\TowerLaunchers\HomingLauncher.cs" />
     <Compile Include="Assets\Domain\Enemy\ValueObjects\EnemyStats.cs" />
     <Compile Include="Assets\Domain\Wave\Services\WaveService.cs" />
@@ -104,8 +104,8 @@
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\Core\Input\InputSchemeSwitcher.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\TowerDefense\UI\TowerDefenseInputSchemeSwitcher.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\ActionGameFramework\Audio\HealthChangeSound.cs" />
-    <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\TowerDefense\Economy\CurrencyGainer.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\ActionGameFramework\Audio\HealthChangeSoundSelector.cs" />
+    <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\TowerDefense\Economy\CurrencyGainer.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\ActionGameFramework\Audio\RandomAudioSource.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\TowerDefense\Towers\Data\TowerLevelData.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\Core\Data\GameDataStoreBase.cs" />
@@ -114,8 +114,8 @@
     <Compile Include="Assets\Domain\Core\ValueObjects\Health.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\TowerDefense\Game\LevelSaveData.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\TowerDefense\Level\LevelManager.cs" />
-    <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\Core\Utilities\RepeatingTimer.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\TowerDefense\Agents\AgentEffect.cs" />
+    <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\Core\Utilities\RepeatingTimer.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\Core\Health\DamageableListener.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\TowerDefense\UI\ScorePanel.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\PostProcessing\Runtime\Models\AntialiasingModel.cs" />
@@ -128,8 +128,8 @@
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\TowerDefense\UI\UrlOpen.cs" />
     <Compile Include="Assets\Domain\Enemy\Events\EnemyEvents.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\ActionGameFramework\Health\DamageZone.cs" />
-    <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\PostProcessing\Runtime\PostProcessingContext.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\PostProcessing\Runtime\PostProcessingModel.cs" />
+    <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\PostProcessing\Runtime\PostProcessingContext.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\TowerDefense\UI\HUD\BuildInfoUI.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\TowerDefense\Towers\Projectiles\ContactDestroyer.cs" />
     <Compile Include="Assets\Domain\Tower\ValueObjects\TowerStats.cs" />
@@ -162,8 +162,8 @@
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\ActionGameFramework\Audio\HealthChangeAudioSource.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\TowerDefense\UI\RadiusVisualizerController.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\TowerDefense\UI\PauseMenu.cs" />
-    <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\TowerDefense\UI\SceneLoader.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\Core\Data\IDataSaver.cs" />
+    <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\TowerDefense\UI\SceneLoader.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\TowerDefense\UI\LevelSelectButton.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\ActionGameFramework\Projectiles\BallisticProjectile.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\ActionGameFramework\Health\DamageCollider.cs" />
@@ -180,23 +180,24 @@
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\ActionGameFramework\Projectiles\BallisticFireMode.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\TowerDefense\Game\GameDataStore.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\PostProcessing\Runtime\Components\MotionBlurComponent.cs" />
+    <Compile Include="Assets\GameMain\Procedure\LaunchProcedure.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\PostProcessing\Runtime\Utils\ColorGradingCurve.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\TowerDefense\UI\HUD\TowerDefenseMainMenu.cs" />
-    <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\Core\Input\TouchInfo.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\TowerDefense\Affectors\AttackAffector.cs" />
+    <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\Core\Input\TouchInfo.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\PostProcessing\Runtime\Models\ScreenSpaceReflectionModel.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\TowerDefense\Economy\LootDrop.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\Core\UI\Modal.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\PostProcessing\Runtime\Models\GrainModel.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\TowerDefense\Affectors\CurrencyAffector.cs" />
-    <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\TowerDefense\Agents\HomeBaseAttacker.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\Core\Input\PointerInfo.cs" />
+    <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\TowerDefense\Agents\HomeBaseAttacker.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\TowerDefense\Effects\ProjectileEffect.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\PostProcessing\Runtime\Components\FxaaComponent.cs" />
-    <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\PostProcessing\Runtime\Components\DepthOfFieldComponent.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\ActionGameFramework\Projectiles\BallisticArcHeight.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\Core\UI\BasicAnimatingMainMenuPage.cs" />
+    <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\PostProcessing\Runtime\Components\DepthOfFieldComponent.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\Core\Game\LevelItem.cs" />
     <Compile Include="Assets\Domain\Core\ValueObjects\Position.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\TowerDefense\Towers\Data\TowerLibrary.cs" />
@@ -256,8 +257,8 @@
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\Core\Input\InputScheme.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\Core\Game\LevelList.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\Core\Extensions\IListExtensions.cs" />
-    <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\ActionGameFramework\Spawning\HitObject.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\TowerDefense\UI\MouseScroll.cs" />
+    <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\ActionGameFramework\Spawning\HitObject.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\TowerDefense\Towers\ITowerRadiusProvider.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\TowerDefense\Towers\TowerLaunchers\HitscanLauncher.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\TowerDefense\Towers\Placement\IPlacementArea.cs" />
@@ -267,13 +268,13 @@
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\TowerDefense\Towers\Projectiles\SplashDamager.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\PostProcessing\Runtime\Components\EyeAdaptationComponent.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\ActionGameFramework\Spawning\WeightedObjectList.cs" />
-    <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\PostProcessing\Runtime\Components\ColorGradingComponent.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\PostProcessing\Runtime\Attributes\TrackballGroupAttribute.cs" />
+    <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\PostProcessing\Runtime\Components\ColorGradingComponent.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\Core\Data\EncryptedJsonSaver.cs" />
-    <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\Core\UI\AnimatingMainMenuPage.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\Core\Input\KeyboardMouseInput.cs" />
-    <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\TowerDefense\Towers\Tower.cs" />
+    <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\Core\UI\AnimatingMainMenuPage.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\TowerDefense\Affectors\PassiveAffector.cs" />
+    <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\TowerDefense\Towers\Tower.cs" />
     <Compile Include="Assets\Domain\Tower\Services\TowerService.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\TowerDefense\Level\PlayerHomeBase.cs" />
     <Compile Include="Assets\UnityTechnologies\TowerDefenseTemplate\Scripts\Core\Utilities\Timer.cs" />
@@ -313,6 +314,7 @@
     <None Include="Assets\UnityTechnologies\TowerDefenseTemplate\PostProcessing\Editor Resources\UI\Trackball.shader" />
     <None Include="Assets\UnityTechnologies\TowerDefenseTemplate\PostProcessing\Editor Resources\Monitors\WaveformRender.shader" />
     <None Include="Assets\UnityTechnologies\TowerDefenseTemplate\PostProcessing\Resources\Shaders\Common.cginc" />
+    <None Include="Assets\UnityGameFramework\package.json" />
     <None Include="Assets\UnityTechnologies\TowerDefenseTemplate\PostProcessing\Editor Resources\Monitors\VectorscopeRender.shader" />
     <None Include="Assets\UnityTechnologies\TowerDefenseTemplate\PostProcessing\Resources\Shaders\Bloom.shader" />
     <None Include="Assets\UnityTechnologies\TowerDefenseTemplate\PostProcessing\Resources\Shaders\Uber.shader" />
@@ -582,6 +584,9 @@
     </Reference>
     <Reference Include="UnityEditor.UnityConnectModule">
       <HintPath>C:\Program Files\Tuanjie\Hub\Editor\2022.3.55t1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>D:\Unity_Project\TowerDefence-DomainDriverDesign\Assets\UnityGameFramework\Libraries\ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:\Program Files\Tuanjie\Hub\Editor\2022.3.55t1\Editor\Data\TuanjieReferenceAssemblies\tuanjie-4.8-api\mscorlib.dll</HintPath>
@@ -959,49 +964,61 @@
       <HintPath>C:\Program Files\Tuanjie\Hub\Editor\2022.3.55t1\Editor\Data\TuanjieReferenceAssemblies\tuanjie-4.8-api\Facades\System.Xml.XPath.XDocument.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>D:\Unity_Project\TowerDefense_DomainDriverDesign\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
+      <HintPath>D:\Unity_Project\TowerDefence-DomainDriverDesign\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.AI.Navigation">
-      <HintPath>D:\Unity_Project\TowerDefense_DomainDriverDesign\Library\ScriptAssemblies\Unity.AI.Navigation.dll</HintPath>
+      <HintPath>D:\Unity_Project\TowerDefence-DomainDriverDesign\Library\ScriptAssemblies\Unity.AI.Navigation.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PlasticSCM.Editor">
-      <HintPath>D:\Unity_Project\TowerDefense_DomainDriverDesign\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
+      <HintPath>D:\Unity_Project\TowerDefence-DomainDriverDesign\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.AI.Navigation.Updater">
-      <HintPath>D:\Unity_Project\TowerDefense_DomainDriverDesign\Library\ScriptAssemblies\Unity.AI.Navigation.Updater.dll</HintPath>
+      <HintPath>D:\Unity_Project\TowerDefence-DomainDriverDesign\Library\ScriptAssemblies\Unity.AI.Navigation.Updater.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>D:\Unity_Project\TowerDefense_DomainDriverDesign\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>D:\Unity_Project\TowerDefence-DomainDriverDesign\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualStudio.Editor">
-      <HintPath>D:\Unity_Project\TowerDefense_DomainDriverDesign\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
+      <HintPath>D:\Unity_Project\TowerDefence-DomainDriverDesign\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:\Unity_Project\TowerDefense_DomainDriverDesign\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.UI">
-      <HintPath>D:\Unity_Project\TowerDefense_DomainDriverDesign\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+      <HintPath>D:\Unity_Project\TowerDefence-DomainDriverDesign\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:\Unity_Project\TowerDefense_DomainDriverDesign\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>D:\Unity_Project\TowerDefence-DomainDriverDesign\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>D:\Unity_Project\TowerDefense_DomainDriverDesign\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>D:\Unity_Project\TowerDefence-DomainDriverDesign\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.AI.Navigation.Editor">
-      <HintPath>D:\Unity_Project\TowerDefense_DomainDriverDesign\Library\ScriptAssemblies\Unity.AI.Navigation.Editor.dll</HintPath>
+      <HintPath>D:\Unity_Project\TowerDefence-DomainDriverDesign\Library\ScriptAssemblies\Unity.AI.Navigation.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>D:\Unity_Project\TowerDefense_DomainDriverDesign\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+      <HintPath>D:\Unity_Project\TowerDefence-DomainDriverDesign\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.AI.Navigation.Editor.ConversionSystem">
-      <HintPath>D:\Unity_Project\TowerDefense_DomainDriverDesign\Library\ScriptAssemblies\Unity.AI.Navigation.Editor.ConversionSystem.dll</HintPath>
+      <HintPath>D:\Unity_Project\TowerDefence-DomainDriverDesign\Library\ScriptAssemblies\Unity.AI.Navigation.Editor.ConversionSystem.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>D:\Unity_Project\TowerDefense_DomainDriverDesign\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>D:\Unity_Project\TowerDefence-DomainDriverDesign\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>D:\Unity_Project\TowerDefence-DomainDriverDesign\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="UnityGameFramework.Runtime.csproj">
+      <Project>{938db9ea-fccc-37a0-5a11-1089bdc231d4}</Project>
+      <Name>UnityGameFramework.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="GameFramework.csproj">
+      <Project>{eb19356f-0d20-eb84-c0c5-02c413a476c0}</Project>
+      <Name>GameFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityGameFramework.Editor.csproj">
+      <Project>{e67e4860-23f7-dc66-c38b-6a8c61d4cf23}</Project>
+      <Name>UnityGameFramework.Editor</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
