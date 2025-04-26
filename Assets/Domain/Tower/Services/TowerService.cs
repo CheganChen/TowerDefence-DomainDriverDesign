@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TowerDefense.Domain.Core.ValueObjects;
 using TowerDefense.Domain.Tower.Entities;
 using TowerDefense.Domain.Tower.ValueObjects;
+using Range = TowerDefense.Domain.Core.ValueObjects.Range;
 
 namespace Domain.Tower.Services
 {
