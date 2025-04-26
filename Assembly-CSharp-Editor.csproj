@@ -388,6 +388,9 @@
     <Reference Include="ICSharpCode.SharpZipLib">
       <HintPath>D:\Unity_Project\TowerDefence-DomainDriverDesign\Assets\UnityGameFramework\Libraries\ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
+    <Reference Include="LitJson">
+      <HintPath>D:\Unity_Project\TowerDefence-DomainDriverDesign\Assets\GameMain\Plugins\LitJson.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>D:\Unity_Project\TowerDefence-DomainDriverDesign\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
     </Reference>
