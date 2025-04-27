@@ -5,20 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72cf6162-f63a-46c6-af0a-d557755ea627" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.TowerDefence-DomainDriverDesign/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.TowerDefence-DomainDriverDesign/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.TowerDefence-DomainDriverDesign/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.TowerDefence-DomainDriverDesign/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.TowerDefence-DomainDriverDesign/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.TowerDefence-DomainDriverDesign/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Procedure.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Procedure/LaunchProcedure.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Procedure/LaunchProcedure.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DDDLancher.scene" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DDDLancher.scene" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UnityGameFramework" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UnityGameFramework" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UnityGameFramework.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UnityGameFramework.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TowerDefence-DomainDriverDesign/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TowerDefence-DomainDriverDesign/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TowerDefence-DomainDriverDesign/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TowerDefence-DomainDriverDesign/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scenes/DDDLancher.scene" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scenes/DDDLancher.scene" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRScene.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRScene.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Procedures/ProcedureMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Procedures/ProcedureMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Procedures/ProcedurePreload.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Procedures/ProcedurePreload.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/MenuForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/MenuForm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/UIExtension.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/UIExtension.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UnityTechnologies/TowerDefenseTemplate/Prefabs/Player/GameCamera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/TowerDefenseTemplate/Prefabs/Player/GameCamera.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,8 +24,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/GameMain/Procedure/LaunchProcedure.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/Unity_Project/TowerDefence-DomainDriverDesign/Assets/UnityGameFramework.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Button.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -41,19 +35,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true",
+    "附加到 Unity 编辑器.附加到 Unity 编辑器.executor": "Debug"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="附加到 Unity 编辑器.附加到 Unity 编辑器">
     <configuration name="启动 Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Tuanjie\Hub\Editor\2022.3.55t1\Editor\Tuanjie.exe" />
@@ -71,13 +66,15 @@
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <method v="2" />
     </configuration>
-    <configuration name="附加到 Unity 编辑器" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="附加到 Unity 编辑器" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="11952">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="11952" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
-        <list />
+        <list>
+          <MonoRuntime />
+        </list>
       </option>
       <option name="selectedOptions">
         <list />
@@ -108,6 +105,7 @@
       <updated>1745652831819</updated>
       <workItem from="1745652832986" duration="845000" />
       <workItem from="1745653728300" duration="186000" />
+      <workItem from="1745765836357" duration="5318000" />
     </task>
     <servers />
   </component>
