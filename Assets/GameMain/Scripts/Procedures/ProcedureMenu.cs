@@ -1,5 +1,6 @@
 ﻿using GameFramework.Event;
 using GameFramework.Procedure;
+using UnityEngine;
 using UnityGameFramework.Runtime;
 using ProcedureOwner = GameFramework.Fsm.IFsm<GameFramework.Procedure.IProcedureManager>;
 
@@ -19,7 +20,7 @@ namespace Pixel
         protected override void OnEnter(ProcedureOwner procedureOwner)
         {
             base.OnEnter(procedureOwner);
-
+            
             GameEntry.Event.Subscribe(OpenUIFormSuccessEventArgs.EventId, OnOpenUIFormSuccess);
 
             m_StartGame = false;

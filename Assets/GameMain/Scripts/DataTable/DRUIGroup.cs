@@ -5,7 +5,7 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 // 此文件由工具自动生成，请勿直接修改。
-// 生成时间：2025-04-28 00:02:18.180
+// 生成时间：2025-04-28 00:02:18.193
 //------------------------------------------------------------
 
 using GameFramework;
@@ -19,14 +19,14 @@ using UnityGameFramework.Runtime;
 namespace Pixel
 {
     /// <summary>
-    /// 场景配置表。
+    /// UI组配置表。
     /// </summary>
-    public class DRScene : DataRowBase
+    public class DRUIGroup : DataRowBase
     {
         private int m_Id = 0;
 
         /// <summary>
-        /// 获取场景编号。
+        /// 获取配置编号。
         /// </summary>
         public override int Id
         {
@@ -37,18 +37,18 @@ namespace Pixel
         }
 
         /// <summary>
-        /// 获取资源Id。
+        /// 获取UI组名字。
         /// </summary>
-        public int AssetId
+        public string Name
         {
             get;
             private set;
         }
 
         /// <summary>
-        /// 获取流程名称。
+        /// 获取深度。
         /// </summary>
-        public string Procedure
+        public int Depth
         {
             get;
             private set;
@@ -66,8 +66,8 @@ namespace Pixel
             index++;
             m_Id = int.Parse(columnStrings[index++]);
             index++;
-            AssetId = int.Parse(columnStrings[index++]);
-            Procedure = columnStrings[index++];
+            Name = columnStrings[index++];
+            Depth = int.Parse(columnStrings[index++]);
 
             GeneratePropertyArray();
             return true;
@@ -80,8 +80,8 @@ namespace Pixel
                 using (BinaryReader binaryReader = new BinaryReader(memoryStream, Encoding.UTF8))
                 {
                     m_Id = binaryReader.Read7BitEncodedInt32();
-                    AssetId = binaryReader.Read7BitEncodedInt32();
-                    Procedure = binaryReader.ReadString();
+                    Name = binaryReader.ReadString();
+                    Depth = binaryReader.Read7BitEncodedInt32();
                 }
             }
 

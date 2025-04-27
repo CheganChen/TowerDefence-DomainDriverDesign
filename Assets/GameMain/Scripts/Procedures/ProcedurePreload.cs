@@ -2,6 +2,7 @@
 using GameFramework.Event;
 using GameFramework.Resource;
 using System.Collections.Generic;
+using GameFramework.DataTable;
 using GameFramework.Procedure;
 using UnityEngine;
 using UnityGameFramework.Runtime;
@@ -14,6 +15,8 @@ namespace Pixel
         public static readonly string[] DataTableNames =
         {
             "Scene",
+            "UIForm",
+            "UIGroup",
         };
 
          private Dictionary<string, bool> m_LoadedFlag = new Dictionary<string, bool>();
@@ -58,10 +61,14 @@ namespace Pixel
                     return;
                 }
             }
+            
+            SetUIComponent();
+
 
             Debug.Log("load procedure compelete!");
             //procedureOwner.SetData<VarInt32>("NextSceneId", GameEntry.Config.GetInt("Scene.Menu"));
             //ChangeState<ProcedureChangeScene>(procedureOwner);
+            ChangeState<ProcedureMenu>(procedureOwner);
         }
 
         private void PreloadResources()
@@ -74,12 +81,12 @@ namespace Pixel
             {
                 LoadDataTable(dataTableName);
             }
-
+            
             // Preload dictionaries
             LoadDictionary("Default");
-
+            
             // Preload fonts
-           // LoadFont("MainFont");
+            // LoadFont("MainFont");
         }
 
         private void LoadConfig(string configName)
@@ -101,6 +108,18 @@ namespace Pixel
             string dictionaryAssetName = AssetUtility.GetDictionaryAsset(dictionaryName, false);
             m_LoadedFlag.Add(dictionaryAssetName, false);
             GameEntry.Localization.ReadData(dictionaryAssetName, this);
+        }
+        
+        /// <summary>
+        /// 添加UIGroup
+        /// </summary>
+        private void SetUIComponent()
+        {
+            IDataTable<DRUIGroup> dtUiGroup = GameEntry.DataTable.GetDataTable<DRUIGroup>();
+            foreach (var item in dtUiGroup)
+            {
+                GameEntry.UI.AddUIGroup(item.Name, item.Depth);
+            }
         }
 
         private void LoadFont(string fontName)

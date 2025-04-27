@@ -17,8 +17,21 @@ namespace Pixel
         private GameObject m_QuitButton = null;
 
         private ProcedureMenu m_ProcedureMenu = null;
+        
+       public void OnLevelSelect()
+       {
+           Debug.Log("OnLevelSelect");
+       }
 
-       //todo 菜单页面点击事件回调定义
+       public void OnOptionsClick()
+       {
+           Debug.Log("OnOptionsClick");
+       }
+
+       public void OnQuitClick()
+       {
+           Debug.Log("OnQuitClick");
+       }
 
 #if UNITY_2017_3_OR_NEWER
         protected override void OnOpen(object userData)

@@ -150,16 +150,20 @@ namespace Pixel
 
         public static int? OpenUIForm(this UIComponent uiComponent, int uiFormId, object userData = null)
         {
-            /*
-            UIData uiData = GameEntry.Data.GetData<DataUI>().GetUIData(uiFormId);
-            if (uiData == null)
+            IDataTable<DRUIForm> dtUIForm = GameEntry.DataTable.GetDataTable<DRUIForm>();
+            IDataTable<DRUIGroup> dtUiGroup = GameEntry.DataTable.GetDataTable<DRUIGroup>();
+            
+            DRUIForm drUIForm = dtUIForm.GetDataRow(uiFormId);
+            DRUIGroup druiGroup = dtUiGroup.GetDataRow(drUIForm.UIGroupId);
+            
+            if (drUIForm == null)
             {
                 Log.Warning("Can not load UI form '{0}' from data table.", uiFormId.ToString());
                 return null;
             }
 
-            string assetName = uiData.AssetPath;
-            if (!uiData.AllowMultiInstance)
+            string assetName = AssetUtility.GetUIFormAsset(drUIForm.Name);
+            if (!drUIForm.AllowMultiInstance)
             {
                 if (uiComponent.IsLoadingUIForm(assetName))
                 {
@@ -172,9 +176,7 @@ namespace Pixel
                 }
             }
 
-            return uiComponent.OpenUIForm(assetName, uiData.UIGroupData.Name, Constant.AssetPriority.UIFormAsset, uiData.PauseCoveredUIForm, userData);
-            */
-            return null;
+            return uiComponent.OpenUIForm(assetName, druiGroup.Name  , Constant.AssetPriority.UIFormAsset, drUIForm.PauseCoveredUIForm, userData);
         }
     }
 }
