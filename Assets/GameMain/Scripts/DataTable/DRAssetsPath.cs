@@ -5,7 +5,7 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 // 此文件由工具自动生成，请勿直接修改。
-// 生成时间：2025-04-29 23:28:43.093
+// 生成时间：2025-04-29 23:28:43.106
 //------------------------------------------------------------
 
 using GameFramework;
@@ -19,14 +19,14 @@ using UnityGameFramework.Runtime;
 namespace Pixel
 {
     /// <summary>
-    /// 场景配置表。
+    /// 资源路径配置表。
     /// </summary>
-    public class DRScene : DataRowBase
+    public class DRAssetsPath : DataRowBase
     {
         private int m_Id = 0;
 
         /// <summary>
-        /// 获取场景编号。
+        /// 获取资源编号。
         /// </summary>
         public override int Id
         {
@@ -37,18 +37,18 @@ namespace Pixel
         }
 
         /// <summary>
-        /// 获取资源Id。
+        /// 获取资源名称。
         /// </summary>
-        public int AssetId
+        public string AssetPath
         {
             get;
             private set;
         }
 
         /// <summary>
-        /// 获取流程名称。
+        /// 获取资源组Id。
         /// </summary>
-        public string Procedure
+        public string ResourceGroupIndexs
         {
             get;
             private set;
@@ -66,8 +66,8 @@ namespace Pixel
             index++;
             m_Id = int.Parse(columnStrings[index++]);
             index++;
-            AssetId = int.Parse(columnStrings[index++]);
-            Procedure = columnStrings[index++];
+            AssetPath = columnStrings[index++];
+            ResourceGroupIndexs = columnStrings[index++];
 
             GeneratePropertyArray();
             return true;
@@ -80,8 +80,8 @@ namespace Pixel
                 using (BinaryReader binaryReader = new BinaryReader(memoryStream, Encoding.UTF8))
                 {
                     m_Id = binaryReader.Read7BitEncodedInt32();
-                    AssetId = binaryReader.Read7BitEncodedInt32();
-                    Procedure = binaryReader.ReadString();
+                    AssetPath = binaryReader.ReadString();
+                    ResourceGroupIndexs = binaryReader.ReadString();
                 }
             }
 

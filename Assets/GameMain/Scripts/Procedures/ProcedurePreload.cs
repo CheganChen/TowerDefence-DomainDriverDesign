@@ -17,6 +17,7 @@ namespace Pixel
             "Scene",
             "UIForm",
             "UIGroup",
+            "AssetsPath",
         };
 
          private Dictionary<string, bool> m_LoadedFlag = new Dictionary<string, bool>();
@@ -66,9 +67,9 @@ namespace Pixel
 
 
             Debug.Log("load procedure compelete!");
-            //procedureOwner.SetData<VarInt32>("NextSceneId", GameEntry.Config.GetInt("Scene.Menu"));
-            //ChangeState<ProcedureChangeScene>(procedureOwner);
-            ChangeState<ProcedureMenu>(procedureOwner);
+            procedureOwner.SetData<VarInt32>("NextSceneId", GameEntry.Config.GetInt("Scene.Menu"));
+            ChangeState<ProcedureChangeScene>(procedureOwner);
+            //ChangeState<ProcedureMenu>(procedureOwner);
         }
 
         private void PreloadResources()
