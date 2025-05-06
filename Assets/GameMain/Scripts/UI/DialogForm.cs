@@ -178,7 +178,7 @@ namespace Pixel
         {
             if (string.IsNullOrEmpty(confirmText))
             {
-                confirmText = GameEntry.Localization.GetString("Dialog.ConfirmButton");
+                confirmText = GameEntry.Localization.GetString("Confirm");
             }
 
             for (int i = 0; i < m_ConfirmTexts.Length; i++)
@@ -191,7 +191,7 @@ namespace Pixel
         {
             if (string.IsNullOrEmpty(cancelText))
             {
-                cancelText = GameEntry.Localization.GetString("Dialog.CancelButton");
+                cancelText = GameEntry.Localization.GetString("Cancel");
             }
 
             for (int i = 0; i < m_CancelTexts.Length; i++)

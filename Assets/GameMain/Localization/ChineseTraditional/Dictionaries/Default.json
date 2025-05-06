@@ -71,7 +71,9 @@
       "ForceUpdate.Message": "當前遊戲版本過舊，是否前往更新？",
       "ForceUpdate.UpdateButton": "更新",
       "ForceUpdate.QuitButton": "退出",
-      "Download": "下載"
+      "Download": "下載",
+      "AskQuitGame.Title" : "確認退出",
+      "AskQuitGame.Message" : "是否確認退出遊戲"
     }
   }
 ]

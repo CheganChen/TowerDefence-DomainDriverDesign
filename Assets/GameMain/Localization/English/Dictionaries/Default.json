@@ -71,7 +71,9 @@
       "ForceUpdate.Message": "Current version is too old. Do you want to update it?",
       "ForceUpdate.UpdateButton": "Update",
       "ForceUpdate.QuitButton": "Quick",
-      "Download": "Download"
+      "Download": "Download",
+      "AskQuitGame.Title" : "CONFIRM TO QUIT",
+      "AskQuitGame.Message" : "Are you sure to quit the game?"
     }
   }
 ]

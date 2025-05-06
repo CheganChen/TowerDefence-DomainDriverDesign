@@ -31,6 +31,14 @@ namespace Pixel
        public void OnQuitClick()
        {
            Debug.Log("OnQuitClick");
+           GameEntry.UI.OpenDialog(new DialogParams()
+           {
+               Mode = 2,
+               Title = GameEntry.Localization.GetString("AskQuitGame.Title"),
+               Message = GameEntry.Localization.GetString("AskQuitGame.Message"),
+               OnClickConfirm = delegate (object userData) { UnityGameFramework.Runtime.GameEntry.Shutdown(ShutdownType.Quit); },
+           });
+          
        }
 
 #if UNITY_2017_3_OR_NEWER

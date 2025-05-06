@@ -60,5 +60,10 @@ namespace Pixel
         /// 下载速度界面
         /// </summary>
         UIDownloadForm = 1010,
+        
+        /// <summary>
+        /// 通用弹窗
+        /// </summary>
+        CommonDialogForm = 1011,
     }
 }

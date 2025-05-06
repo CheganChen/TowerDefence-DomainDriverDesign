@@ -8,6 +8,7 @@
 using GameFramework.DataTable;
 using GameFramework.UI;
 using System.Collections;
+using GameFramework.Procedure;
 using Pixel;
 using UnityEngine;
 using UnityEngine.UI;
@@ -177,6 +178,20 @@ namespace Pixel
             }
 
             return uiComponent.OpenUIForm(assetName, druiGroup.Name  , Constant.AssetPriority.UIFormAsset, drUIForm.PauseCoveredUIForm, userData);
+        }
+        
+        public static void OpenDialog(this UIComponent uiComponent, DialogParams dialogParams)
+        {
+            /*
+            if (((ProcedureBase)GameEntry.Procedure.CurrentProcedure).UseNativeDialog)
+            {
+                OpenNativeDialog(dialogParams);
+            }
+            else
+            */
+            {
+                uiComponent.OpenUIForm(EnumUIForm.CommonDialogForm, dialogParams);
+            }
         }
     }
 }

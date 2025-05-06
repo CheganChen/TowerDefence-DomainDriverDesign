@@ -1110,9 +1110,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_AvailableProcedureTypeNames:
   - Pixel.ProcedureChangeScene
+  - Pixel.ProcedureLaunch
   - Pixel.ProcedureMenu
   - Pixel.ProcedurePreload
-  m_EntranceProcedureTypeName: Pixel.ProcedurePreload
+  m_EntranceProcedureTypeName: Pixel.ProcedureLaunch
 --- !u!114 &1710809965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1214,7 +1215,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EditorResourceMode: 1
-  m_EditorLanguage: 0
+  m_EditorLanguage: 9
   m_TextHelperTypeName: UnityGameFramework.Runtime.DefaultTextHelper
   m_VersionHelperTypeName: UnityGameFramework.Runtime.DefaultVersionHelper
   m_LogHelperTypeName: UnityGameFramework.Runtime.DefaultLogHelper

@@ -71,7 +71,10 @@
       "ForceUpdate.Message": "当前游戏版本过旧，是否前往更新？",
       "ForceUpdate.UpdateButton": "更新",
       "ForceUpdate.QuitButton": "退出",
-      "Download": "下载"
+      "Download": "下载",
+      "AskQuitGame.Title" : "确认退出",
+      "AskQuitGame.Message" : "是否确认退出游戏"
+      
     }
   }
 ]

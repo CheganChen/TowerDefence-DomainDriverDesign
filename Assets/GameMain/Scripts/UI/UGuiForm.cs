@@ -58,7 +58,7 @@ namespace Pixel
         
         public void PlayUISound(int uiSoundId)
         {
-          //  GameEntry.Sound.PlayUISound(uiSoundId);
+            GameEntry.Sound.PlayUISound(uiSoundId);
         }
 
         public static void SetMainFont(Font mainFont)

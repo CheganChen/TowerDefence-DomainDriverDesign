@@ -69,7 +69,6 @@ namespace Pixel
             Debug.Log("load procedure compelete!");
             procedureOwner.SetData<VarInt32>("NextSceneId", GameEntry.Config.GetInt("Scene.Menu"));
             ChangeState<ProcedureChangeScene>(procedureOwner);
-            //ChangeState<ProcedureMenu>(procedureOwner);
         }
 
         private void PreloadResources()
@@ -87,7 +86,7 @@ namespace Pixel
             LoadDictionary("Default");
             
             // Preload fonts
-            // LoadFont("MainFont");
+             LoadFont("Roboto-Black");
         }
 
         private void LoadConfig(string configName)
